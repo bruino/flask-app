@@ -1,0 +1,24 @@
+{
+  "name": "scaffold",
+  "version": "1.0.0",
+  "description": "configurar la /app para que sea generico agregar los requirements necesarios",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bruino/flask_scaffold.git"
+  },
+  "keywords": [
+    "flask"
+  ],
+  "author": "Bruno Sarverry",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bruino/flask_scaffold/issues"
+  },
+  "homepage": "https://github.com/bruino/flask_scaffold#readme"
+}
