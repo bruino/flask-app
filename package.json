@@ -1,24 +1,25 @@
 {
-  "name": "scaffold",
+  "name": "flask-app",
   "version": "1.0.0",
-  "description": "configurar la /app para que sea generico agregar los requirements necesarios",
-  "directories": {
-    "test": "tests"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bruino/flask_scaffold.git"
+    "url": "git+https://github.com/bruino/flask-app.git"
   },
   "keywords": [
     "flask"
   ],
   "author": "Bruno Sarverry",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/bruino/flask_scaffold/issues"
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack --config webpack.config.js"
   },
-  "homepage": "https://github.com/bruino/flask_scaffold#readme"
+  "dependencies": {
+    "@tabler/core": "^1.0.0-beta2",
+    "css-loader": "^5.2.1",
+    "file-loader": "^6.2.0",
+    "mini-css-extract-plugin": "^1.4.1",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.31.2",
+    "webpack-cli": "^4.6.0"
+  }
 }

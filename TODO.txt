@@ -1,0 +1,1 @@
+- Usage webpack with development dependency (see https://dev.to/icewreck/react-flask-integration-part-1-setup-with-webpack-djo)
