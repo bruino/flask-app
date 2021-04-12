@@ -1,9 +1,11 @@
 
 {% extends "layout.html" %}
 {% block content %}
+<div class="jumbotron py-5">
     <div class="container">
         <h1>Welcome {{ current_user.username }}</h1>
-        <h3>This is the members-only page.</h3>
+        <p class="lead">This is the members-only page.</p>
     </div>
+</div>
 {% endblock %}
 

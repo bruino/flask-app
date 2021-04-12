@@ -43,36 +43,31 @@
                 </div>
             {% endfor %}
         {% endif %} {% endwith %}
-        <form class="card card-md" id="registerForm" action="{{ url_for('public.register') }}" method="POST">
+        <form class="card card-md" id="loginForm" action="{{ url_for('public.login') }}" method="POST">
             {{ form.csrf_token }}
             <div class="card-body">
-                <h2 class="card-title text-center mb-4">Register</h2>
+                <h2 class="card-title text-center mb-4">Login to your account</h2>
                 <div class="mb-3">
-                    {{form.username.label(class_="form-label")}}
-                    {{form.username(placeholder="Username", class_="form-control")}}
+                    <label class="form-label">Username</label>
+                    {{ form.username(placeholder="Enter username", class_="form-control") }}
                 </div>
-                <div class="mb-3">
-                    {{form.email.label(class_="form-label")}}
-                    {{form.email(placeholder="Email", class_="form-control")}}
-                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                </div>
-                <div class="mb-3">
-                    {{form.password.label(class_="form-label")}}
-                    {{form.password(placeholder="Password", class_="form-control")}}
-                </div>
-                <div class="mb-3">
-                    {{form.confirm.label(class_="form-label")}}
-                    {{form.confirm(placeholder="Password (again)", class_="form-control")}}
+                <div class="mb-2">
+                    <label class="form-label">
+                        Password
+                    </label>
+                    <div class="input-group input-group-flat">
+                        {{ form.password(placeholder="Password", class_="form-control") }}
+                    </div>
                 </div>
                 <div class="form-footer">
-                    <button type="submit" class="btn btn-primary w-100">Register</button>
+                    <button type="submit" class="btn btn-primary w-100">Login</button>
                 </div>
+            </div>
         </form>
         <div class="text-center text-muted mt-3">
-            Already registered? Click <a href="{{ url_for('public.login') }}">here</a> to login.
+            Don't have account yet? <a href="{{ url_for('public.register') }}" tabindex="-1">Create account</a>
         </div>
     </div>
 </div>
 </body>
 </html>
-

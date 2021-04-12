@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Public section, including homepage and signup."""
+"""Public section, including homepage and login."""
 from flask import (
     Blueprint,
     current_app,
@@ -29,8 +29,13 @@ def load_user(user_id):
 @blueprint.route("/", methods=["GET", "POST"])
 def home():
     """Home page."""
+    return render_template("public/home.html")
+
+
+@blueprint.route("/login", methods=["GET", "POST"])
+def login():
+    """Login user."""
     form = LoginForm(request.form)
-    current_app.logger.info("Hello from the home page!")
     # Handle logging in
     if request.method == "POST":
         if form.validate_on_submit():
@@ -40,7 +45,7 @@ def home():
             return redirect(redirect_url)
         else:
             flash_errors(form)
-    return render_template("public/home.html", form=form)
+    return render_template("public/login.html", form=form)
 
 
 @blueprint.route("/logout/")
@@ -74,4 +79,4 @@ def register():
 def about():
     """About page."""
     form = LoginForm(request.form)
-    return render_template("public/about.html", form=form)
+    return render_template("public/about.html")
