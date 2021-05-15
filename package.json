@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bruino/flask-app.git"
+    "url": "git+https://github.com/bruino/scaffold-flask.git"
   },
   "keywords": [
     "flask"
